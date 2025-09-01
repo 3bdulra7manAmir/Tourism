@@ -1,20 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-void main() {
-  runApp(const MainApp());
-}
+import 'core/utils/bloc_observer.dart';
+import 'main_app.dart';
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+  void main() async
+{
+  WidgetsFlutterBinding.ensureInitialized();
 
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
-    );
-  }
+  /// [Bloc Observer]
+  Bloc.observer = const SimpleBlocObserver();
+  
+  //App Run
+  runApp(const Tourism(),);
 }

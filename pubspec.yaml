@@ -6,14 +6,105 @@ version: 0.1.0
 environment:
   sdk: ^3.9.0
 
+# ===========================
+# Dependencies (Runtime)
+# ===========================
 dependencies:
+  # Analyzer & Code Tools
+  analyzer: ^7.0.0
+  analyzer_plugin: ^0.13.4
+
+  # State Management
+  bloc: ^9.0.0
+  flutter_bloc: ^9.1.1
+  equatable: ^2.0.7
+
+  # Flutter Core
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
 
+  # UI & Layout
+  flutter_screenutil: ^5.9.3
+  flutter_svg: ^2.2.0
+  shimmer: ^3.0.0
+  cached_network_image: ^3.4.1
+  device_preview: ^1.3.1
+
+  # Routing
+  go_router: ^16.2.0
+
+  # Storage & Persistence
+  shared_preferences: ^2.5.3
+
+  # Internationalization
+  intl: ^0.20.2
+  intl_utils: ^2.8.11
+
+  # Logging & Utilities
+  logger: ^2.6.1
+  rename_app: ^1.6.5
+
+# ===========================
+# Dev Dependencies
+# ===========================
 dev_dependencies:
+  # Linting & Testing
+  flutter_lints: ^6.0.0
   flutter_test:
     sdk: flutter
-  flutter_lints: ^5.0.0
 
+# ===========================
+# Flutter Assets & Fonts
+# ===========================
 flutter:
   uses-material-design: true
+  generate: true
+
+  # Fonts
+  fonts:
+    - family: Cairo
+      fonts:
+        - asset: assets/fonts/Cairo/Cairo-Black.ttf
+        - asset: assets/fonts/Cairo/Cairo-Bold.ttf
+        - asset: assets/fonts/Cairo/Cairo-ExtraBold.ttf
+        - asset: assets/fonts/Cairo/Cairo-ExtraLight.ttf
+        - asset: assets/fonts/Cairo/Cairo-Light.ttf
+        - asset: assets/fonts/Cairo/Cairo-Medium.ttf
+        - asset: assets/fonts/Cairo/Cairo-Regular.ttf
+        - asset: assets/fonts/Cairo/Cairo-SemiBold.ttf
+
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto/Roboto-Black.ttf
+        - asset: assets/fonts/Roboto/Roboto-Bold.ttf
+        - asset: assets/fonts/Roboto/Roboto-ExtraBold.ttf
+        - asset: assets/fonts/Roboto/Roboto-ExtraLight.ttf
+        - asset: assets/fonts/Roboto/Roboto-Light.ttf
+        - asset: assets/fonts/Roboto/Roboto-Medium.ttf
+        - asset: assets/fonts/Roboto/Roboto-Regular.ttf
+        - asset: assets/fonts/Roboto/Roboto-SemiBold.ttf
+
+  # Assets
+  assets:
+    - assets/fonts/Cairo/
+    - assets/fonts/Roboto/
+
+    - assets/icons/App_Icon/
+    - assets/icons/Home/
+    - assets/icons/Bottom_Nav_Bar/
+
+    - assets/imgs/Home/
+    
+    - assets/jsons/
+
+# ===========================
+# Flutter Intl Configuration
+# ===========================
+flutter_intl:
+  enabled: true
+  arb_dir: lib/config/i18n/l10n
+  output_dir: lib/config/i18n/generated
+  class_name: S
+  main_locale: ar

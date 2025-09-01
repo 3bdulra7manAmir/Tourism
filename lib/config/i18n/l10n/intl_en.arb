@@ -1,0 +1,10 @@
+{
+  "@@locale": "en",
+
+  "error": "Error",
+
+  "menu": "Menu",
+  "profile": "Profile",
+  "services": "Services",
+  "home": "Home"
+}
